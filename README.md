@@ -24,7 +24,10 @@ How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 result: we have our endpoint GET https://<some_id>.execute-api.eu-west-1.amazonaws.com/dev/api/weatherforecast
 
 Later we can include these 2 command in a pipeline
-			
+
+
+#### Todo
+1. Remove serverless usage and do deplyoment with AWS SAM or AWS CDK (serverless4 is required for .net8 and for organization you need subscription)
 
 	  
 
@@ -35,3 +38,4 @@ Later we can include these 2 command in a pipeline
 [Serverless Framework - An Introduction](https://www.serverless.com/framework/docs)<br>
 [Serverless Framework - AWS Lambda Functions](https://www.serverless.com/framework/docs/providers/aws/guide/functions)<br>
 [AWS - Deploy an Existing ASP.NET Core Web API to AWS Lambda](https://aws.amazon.com/blogs/developer/deploy-an-existing-asp-net-core-web-api-to-aws-lambda/)<br>
+[Build and deploy C# Lambda functions with .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/csharp-package.html)
