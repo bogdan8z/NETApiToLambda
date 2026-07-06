@@ -14,7 +14,7 @@ How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 1. rename template.yml, move it to **deployment** folder (in root) add here RootResource
 
 #### Steps to deploy
-1. go to deploymkent folder
+1. go to deployment folder
 1. run >sam build
 1. run >sam validate
 1. go to where the .csproj file is
