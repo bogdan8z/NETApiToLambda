@@ -1,4 +1,4 @@
-# Deploy .NET API endpoint into AWS Lambda
+# Deploying ASP.NET Core APIs to AWS Lambda
 How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 
 
