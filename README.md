@@ -17,7 +17,7 @@ How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 1. run >sam build
 1. run >sam validate
 1. go to where the .csproj file is
-1. run  >sam deploy --profile test-bog-dev1 --stack-name core-cli-stk --s3-bucket core-cli-s3 --capabilities CAPABILITY_IAM -t deployment/template.yml
+1. run  >sam deploy --profile <your-profile> --stack-name core-cli-stk --s3-bucket core-cli-s3 --capabilities CAPABILITY_IAM -t deployment/template.yml
 1. result: we have our endpoint GET https://<some_id>.execute-api.eu-west-1.amazonaws.com/dev/api/weatherforecast
 1. Later we can include these 2 commands in a pipeline
 
