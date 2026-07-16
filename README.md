@@ -11,7 +11,7 @@ How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 1. add StartupLambda.cs file
 1. add LambdaEntryPoint.cs file in **deployment** folder and be sure you have UseStartup<Program>
 1. right click on project and select add aws serverless template
-1. rename template.yml, move it to **deployment** folder (in root) add here RootResource
+1. rename template.yml, move it to **deployment** folder (in root), add here RootResource
 
 #### Steps to deploy
 1. go to deployment folder
