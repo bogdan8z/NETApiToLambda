@@ -8,7 +8,6 @@ How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 1. install sam cli: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html
 1. dotnet tool install -g Amazon.Lambda.Tools
 1. manually create cole-cli-s3 bucket in aws console
-1. add StartupLambda.cs file
 1. add LambdaEntryPoint.cs file in **deployment** folder and be sure you have UseStartup<Program>
 1. right click on project and select add aws serverless template
 1. rename template.yml, move it to **deployment** folder (in root), add here RootResource
@@ -22,6 +21,16 @@ How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 1. result: we have our endpoint GET https://<some_id>.execute-api.eu-west-1.amazonaws.com/dev/api/weatherforecast
 1. Later we can include these 2 commands in a pipeline
 
+#### Local Lambda testing with Mock Lambda Test Tool
+You can test the Lambda locally before deploying to AWS.
+
+1. Install the tool:
+   >dotnet tool install -g Amazon.Lambda.TestTool-8.0
+1. Run it from the project folder:
+   >dotnet lambda-test-tool-8.0
+1. Use a sample API Gateway event to invoke the function and verify the response for `/api/weatherforecast`.
+
+This is useful for validating the Lambda entry point and the ASP.NET Core pipeline without deploying first.
 
 ##### Links
 [Creating & deploying a .NET Core Web API to AWS with the Serverless Framework](https://www.karam.io/blog/2019/creating-and-deploying-a-net-core-web-api-to-aws-with-the-serverless-framework/)<br>
