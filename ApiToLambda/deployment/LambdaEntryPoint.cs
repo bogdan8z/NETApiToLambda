@@ -1,5 +1,11 @@
 ﻿namespace ApiToLambda
 {
+    /// <summary>
+    /// This class extends from APIGatewayProxyFunction which contains the method FunctionHandlerAsync which is the 
+    /// actual Lambda function entry point. The Lambda handler field should be set to
+    /// 
+    /// AspNetOnLambda::AspNetOnLambda.LambdaEntryPoint::FunctionHandlerAsync
+    /// </summary>
     public class LambdaEntryPoint : Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction
     {
         /// <summary>
@@ -23,10 +29,10 @@
         /// <param name="builder">The IHostBuilder to configure.</param>
         protected override void Init(IHostBuilder builder)
         {
-            // builder.ConfigureWebHostDefaults(webBuilder =>
-            //{
-            //    webBuilder.UseStartup<StartupLambda>(); // We'll define StartupLambda next
-            //});
+            builder.ConfigureWebHostDefaults(webBuilder =>
+            {
+               webBuilder.UseStartup<StartupLambda>(); // We'll define StartupLambda next
+            });
         }
 
     }

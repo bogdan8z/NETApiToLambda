@@ -8,6 +8,7 @@ How can we deploy a .NET api endpoint (GET /api/weatherforecast) into a lambda
 1. install sam cli: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html
 1. dotnet tool install -g Amazon.Lambda.Tools
 1. manually create cole-cli-s3 bucket in aws console
+1. add StartupLambda.cs file
 1. add LambdaEntryPoint.cs file in **deployment** folder and be sure you have UseStartup<Program>
 1. right click on project and select add aws serverless template
 1. rename template.yml, move it to **deployment** folder (in root), add here RootResource
